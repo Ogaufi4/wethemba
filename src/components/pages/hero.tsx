@@ -11,14 +11,14 @@ export default () => {
         { title: "Contact", path: "javascript:void(0)" }
     ]
 
-    useEffect(() => {
-        document.onclick = (e) => {
-            const target = e.target;
-            if (!(target as HTMLElement)?.closest?.(".menu-btn")) {
-                setState(false);
-            }
-        };
-    }, [])
+    // useEffect(() => {
+    //     document.onclick = (e) => {
+    //         const target = e.target;
+    //         if (!(target as HTMLElement)?.closest?.(".menu-btn")) {
+    //             setState(false);
+    //         }
+    //     };
+    // }, [])
 
     const Brand = () => (
         <div className="flex items-center justify-between py-5 md:block">
