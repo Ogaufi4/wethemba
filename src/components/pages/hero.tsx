@@ -13,7 +13,8 @@ export default () => {
 
     useEffect(() => {
         document.onclick = (e) => {
-            if (e.target instanceof HTMLElement && !e.target.closest(".menu-btn")) {
+            const target = e.target;
+            if (!(target as HTMLElement)?.closest?.(".menu-btn")) {
                 setState(false);
             }
         };
@@ -86,7 +87,7 @@ export default () => {
                 </header>
                 <section>
                     <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
-                        <div className='flex-none space-y-5 max-w-xl'>
+                        <div>
                             <h1 className="text-4xl text-gray-800 font-extrabold sm:text-5xl">
                                 Wethembaplus
                             </h1>
