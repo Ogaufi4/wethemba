@@ -13,8 +13,9 @@ export default () => {
 
     useEffect(() => {
         document.onclick = (e) => {
-            const target = e.target;
-            if (!target.closest(".menu-btn")) setState(false);
+            if (e.target instanceof HTMLElement && !e.target.closest(".menu-btn")) {
+                setState(false);
+            }
         };
     }, [])
 
